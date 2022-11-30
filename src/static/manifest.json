@@ -1,0 +1,13 @@
+{
+  "short_name": "Ilya Lynd",
+  "name": "Ilya Lynd",
+  "icons": [{
+    "src": "/image/favicon-192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "background_color": "#f4f4f6",
+  "display": "fullscreen",
+  "theme_color": "#f4f4f6",
+  "description": ""
+}

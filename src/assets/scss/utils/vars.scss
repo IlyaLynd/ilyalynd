@@ -1,0 +1,53 @@
+
+/* Brand colors */
+$Blue                      : #14a8ff;
+$DeepBlue                  : #218ad0;
+$Red                       : #ff1459;
+$Pink                      : #ff14ff;
+$Gold                      : #def71c;
+$Green                     : #14ffca;
+
+$Black                     : #000000;
+$DarkGrey                  : #c2cbcc;
+$LightGrey                 : #d8d8d8;
+$White                     : #ffffff;
+
+$Gunmetal                  : #2e3138;
+$Charcoal                  : #40454f;
+$BlackCoral                : #535965;
+$SlateGray                 : #6e7687;
+$RomanSilver               : #848b9a;
+$Manatee                   : #9aa0ac;
+$CadetBlueCrayola          : #b0b5bf;
+$SilverSand                : #c7cad1;
+$Gainsboro                 : #dddfe3;
+$Cultured                  : #f4f4f6;
+
+/* Font options */
+$mainFontWeight            : normal;
+$mainFontSize              : 16px;
+$mainFontFamily            : Arial, sans-serif;
+$mainLineHeight            : 1.5;
+
+/* Screen resolution */
+$mobileWidth               : 320px;
+$tabletWidth               : 768px;
+$laptopWidth               : 992px;
+$desktopWidth              : 1248px;
+$desktopWidth_md           : 1440px;
+$desktopWidth_lg           : 1920px;
+
+/* Primary colors */
+$mainColor                 : $Black;
+$mainBackground            : $Cultured;
+$linkColor                 : $Blue;
+$linkColor_hover           : $DeepBlue;
+
+$accentColor               : $Red;
+
+$successColor              : $Green;
+$warningColor              : $Gold;
+$errorColor                : $Pink;
+
+/* Color shadows */
+$scrollbarBoxShadow        : inset 0 0 1px rgba(0, 0, 0, .66);

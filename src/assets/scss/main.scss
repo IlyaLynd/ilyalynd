@@ -1,0 +1,135 @@
+
+@import 'utils/vars';
+@import 'utils/reset';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+
+/* Base styles */
+html { font-size: $mainFontSize; }
+body { background: $mainBackground; color: $mainColor; font-weight: $mainFontWeight; font-size: 1rem; font-family: $mainFontFamily; line-height: $mainLineHeight; }
+
+#app { position: relative; width: 100%; max-width: $desktopWidth_lg; margin: 0 auto; }
+
+h1 { font: bold 2.074rem/1.2 Arial; }
+h2 { font: bold 1.728rem/1.2 Arial; }
+h3 { font: bold 1.44rem/1.2 Arial; }
+h4 { font: bold 1.2rem/1.2 Arial; }
+h5 { font: bold 1rem/1.2 Arial; }
+h6 { font: bold .875rem/1.2 Arial; }
+
+p { font: normal .875rem/1.2 Arial; }
+b { font-weight: bold; }
+i { font-style: italic; }
+
+a { color: $linkColor; transition: all .3s ease-out;
+  &:active,
+  &:focus { color: $linkColor; }
+
+  // svg { transition: fill, stroke .3s ease-out; }
+}
+
+hr { background: $mainColor; }
+
+.container { position: relative; width: 100%; margin: 0 auto; padding: 1.5rem; background: transparent; display: grid; grid-gap: 1.5rem .75rem; grid-template-rows: auto; grid-template-columns: repeat(6, 1fr);
+  .content { grid-column: 1 / 7; }
+
+  @media screen and (min-width: $mobileWidth) {}
+  @media screen and (min-width: $tabletWidth) { width: $tabletWidth; grid-gap: 1.5rem; grid-template-columns: repeat(9, 1fr);
+    .content { grid-column: 1 / 10; }
+  }
+  @media screen and (min-width: $laptopWidth) { width: $laptopWidth; }
+  @media screen and (min-width: $desktopWidth) { width: $desktopWidth; padding: 1.5rem 3rem; grid-template-columns: repeat(12, 1fr);
+    .content { grid-column: 1 / 13; }
+  }
+  @media screen and (min-width: $desktopWidth_md) {}
+}
+
+@media screen and (min-width: $desktopWidth) {
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { box-shadow: $scrollbarBoxShadow; }
+  ::-webkit-scrollbar-thumb { background: $mainColor; outline: 1px solid $DarkGrey; }
+  ::-webkit-scrollbar-corner { background: $mainColor; }
+  ::-webkit-resizer { background: $DarkGrey; }
+
+  body { scrollbar-width: thin; scrollbar-color: $mainColor $DarkGrey; }
+
+  h1 { font-size: 2.488rem; }
+  h2 { font-size: 2.074rem; }
+  h3 { font-size: 1.728rem; }
+  h4 { font-size: 1.44rem; }
+  h5 { font-size: 1.2rem; }
+  h6 { font-size: 1rem; }
+
+  p { font-size: 1rem; }
+
+  a:hover { color: $linkColor_hover; }
+}
+
+
+/* Form styles */
+form {
+  fieldset { display: flex; }
+
+  label { color: $mainColor; font: normal .875rem/1.2 Arial; }
+  textarea,
+  input { width: 100%; border: 1px solid transparent; border-bottom: 1px solid $mainColor; background: $White; color: $mainColor; font: normal .875rem/1 Arial;
+    &::placeholder { color: $DarkGrey; }
+    &:focus { border-color: $mainColor; }
+    &.success { border-color: $successColor; }
+    &.error { border-color: $errorColor; }
+  }
+  textarea { min-height: 7.5rem; padding: .75rem .5rem; resize: none; }
+  input { height: 3rem; padding: 0 .5rem; }
+
+  @media screen and (min-width: $desktopWidth) {
+    textarea,
+    input { font-size: 1rem; }
+    textarea { min-height: 8rem; }
+    input { height: 3.25rem; }
+  }
+}
+
+.button {
+  a { width: 100%; height: 3rem; border: 1px solid $linkColor; padding: 0 1.5rem; background: $linkColor; color: $White; font: bold .875rem/1 Arial; text-align: center; white-space: nowrap; display: inline-flex; justify-content: center; align-items: center; }
+
+  @media screen and (min-width: $desktopWidth) {
+    a { width: auto; height: 3.25rem; font-size: 1rem;
+      &:hover { border-color: $linkColor_hover; background: $linkColor_hover; color: $White; }
+    }
+  }
+}
+
+
+/* Layout styles */
+header { @include z('header');
+  .container { height: 6rem; padding: 0 .75rem;
+    // .header {}
+
+    @media screen and (min-width: $tabletWidth) {
+      // .header {}
+    }
+    @media screen and (min-width: $desktopWidth) { padding: 0 3rem;
+      // .header {}
+    }
+  }
+}
+
+main { @include z('main'); }
+
+footer { @include z('footer');
+  .container {
+    // .footer {}
+
+    @media screen and (min-width: $tabletWidth) {
+      // .footer {}
+    }
+    @media screen and (min-width: $desktopWidth) {
+      // .footer {}
+    }
+  }
+}
+
+
+/* Page styles */
+@import 'page/index';
